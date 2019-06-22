@@ -1,4 +1,4 @@
-package my.pack
+package io.github.serpro69.kotlinacj
 
 import org.aspectj.lang.*
 import org.aspectj.lang.annotation.*
@@ -23,4 +23,3 @@ class SomeAspect {
         val TO_STRING_RESULT = "test"
     }
 }
-
