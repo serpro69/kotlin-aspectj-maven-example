@@ -1,14 +1,13 @@
 package io.github.serpro69.kotlinacj
 
-import org.hamcrest.CoreMatchers.*
-import org.joda.time.*
-import org.junit.*
-import org.junit.Assert.*
+import org.junit.Test
+import kotlin.test.*
 
-class SomeAspectTest {
+class ToStringAspectTest {
+
     @Test
     @Throws(Exception::class)
-    fun testDateTimeToString() {
-        assertThat(DateTime().toString(), `is`(SomeAspect.TO_STRING_RESULT))
+    fun testIntToString() {
+        assertEquals("42", SomethingSomething().customToString())
     }
 }

@@ -4,22 +4,15 @@ import org.aspectj.lang.*
 import org.aspectj.lang.annotation.*
 
 @Aspect
-class SomeAspect {
+class ToStringAspect {
 
-    @Pointcut("execution(* org.joda.time.base.AbstractDateTime.toString())")
-    fun dateTimeToString() {
+    @Suppress("unused")
+    @Pointcut("execution(* io.github.serpro69.kotlinacj..*.customToString())")
+    fun anyToString() {
     }
 
-    @Around("dateTimeToString()")
+    @Suppress("unused")
+    @Around("anyToString()")
     @Throws(Throwable::class)
-    fun toLowerCase(joinPoint: ProceedingJoinPoint): Any {
-        val ignoredToStringResult = joinPoint.proceed()
-        println("SOME LOG MESSAGE")
-        return TO_STRING_RESULT
-    }
-
-    companion object {
-
-        val TO_STRING_RESULT = "test"
-    }
+    fun to42(joinPoint: ProceedingJoinPoint): Any = "42"
 }

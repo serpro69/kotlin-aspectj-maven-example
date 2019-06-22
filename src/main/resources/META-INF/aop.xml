@@ -2,11 +2,11 @@
 
     <aspects>
         <!-- Aspects -->
-        <aspect name="my.pack.SomeAspect"/>
+        <aspect name="io.github.serpro69.kotlinacj.ToStringAspect"/>
     </aspects>
 
     <weaver options="-verbose -showWeaveInfo">
-        <include within="org.joda.time.base.AbstractDateTime"/>
+        <include within="io.github.serpro69.kotlinacj..*"/>
     </weaver>
 
 </aspectj>
